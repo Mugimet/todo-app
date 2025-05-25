@@ -29,4 +29,5 @@ export async function startServer(port) {
   }
 }
 
-startServer(process.env.PORT || 3001);
+const PORT = process.env.PORT || 3001;
+startServer(PORT);
