@@ -58,7 +58,7 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, './client/src'),
       },
     },
-    root: path.join(process.cwd(), 'client'),
+    root: '.',
     build: {
       outDir: path.join(process.cwd(), 'dist/public'),
       emptyOutDir: true,
