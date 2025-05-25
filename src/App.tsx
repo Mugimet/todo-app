@@ -33,7 +33,7 @@ function App() {
       setIsLoading(true);
       setError(null);
       
-      const response = await fetch('/api/tasks');
+      const response = await fetch('https://todo-backend.onrender.com/api/tasks');
       
       if (!response.ok) {
         throw new Error('Failed to fetch tasks');
@@ -55,7 +55,7 @@ function App() {
       setIsAdding(true);
       setError(null);
       
-      const response = await fetch('/api/tasks', {
+      const response = await fetch('https://todo-backend.onrender.com/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ function App() {
       setTasks(updatedTasks);
       
       // Update in the backend
-      const response = await fetch(`/api/tasks/${task.id}`, {
+      const response = await fetch(`https://todo-backend.onrender.com/api/tasks${task.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ function App() {
       setTasks(updatedTasks);
       
       // Delete from the backend
-      const response = await fetch(`/api/tasks/${taskId}`, {
+      const response = await fetch(`https://todo-backend.onrender.com/api/tasks${taskId}`, {
         method: 'DELETE',
       });
       
