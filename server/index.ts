@@ -29,8 +29,4 @@ export async function startServer(port) {
   }
 }
 
-// Start the server directly if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
-  console.log('Starting server...');
-  startServer(process.env.PORT || 3001);
-}
+startServer(process.env.PORT || 3001);
